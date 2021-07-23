@@ -35,6 +35,7 @@ const TemplateList = () => {
           {categories.map((item: Category, index: Key) => {
             return (
               <button
+                name={`cat-${item.id}`}
                 className={`tab tab-lg tab-boxed ${
                   activeCategory == item.id ? "tab-active" : ""
                 }`}

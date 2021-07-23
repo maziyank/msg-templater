@@ -145,9 +145,9 @@ const Composer = () => {
         </div>
         <div className="flex-none flex flex-row justify-center space-x-2 h-20">
 
-          <button className="btn btn-md btn-primary transition duration-500 ease-in-out" onClick={CopyToClipboard}><CopyIcon />{" "}Copy</button>
-          <button className="btn btn-md btn-secondary transition duration-500 ease-in-out" onClick={Share}><ShareIcon />{" "}Share</button>
-          <button className="btn btn-md btn-accent transition duration-500 ease-in-out" onClick={() => history.goBack()}><CloseIcon />{" "}Close</button>
+          <button name="copy" className="btn btn-md btn-primary transition duration-500 ease-in-out" onClick={CopyToClipboard}><CopyIcon />{" "}Copy</button>
+          <button name="share" className="btn btn-md btn-secondary transition duration-500 ease-in-out" onClick={Share}><ShareIcon />{" "}Share</button>
+          <button name="back" className="btn btn-md btn-accent transition duration-500 ease-in-out" onClick={() => history.goBack()}><CloseIcon />{" "}Close</button>
         </div>
       </div>
     </React.Fragment>
