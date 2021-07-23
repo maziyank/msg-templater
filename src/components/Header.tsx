@@ -24,7 +24,7 @@ const Header: React.FC<Props> = ({ title }) => {
         </span>
       </div>
       <div className="flex-none">
-        <button className="btn btn-outline btn-circle btn-sm" name="darkMode" onClick={changeMode}>
+        <button className="btn btn-outline btn-circle btn-sm" aria-label="night mode switch" onClick={changeMode}>
           <ThemeIcon />
         </button>
       </div>

@@ -40,7 +40,7 @@ const PersonalTemplate = () => {
       </div>
       {user && (
         <Link to={`/main/editor/`}>
-          <button name="add" className="fixed ring-1 ring-opacity-80 ring-purple-500 right-3 bottom-20 z-20 btn btn-circle btn-md bg-primary shadow-2xl transition ease-in duration-200">
+          <button aria-label="add" className="fixed ring-1 ring-opacity-80 ring-purple-500 right-3 bottom-20 z-20 btn btn-circle btn-md bg-primary shadow-2xl transition ease-in duration-200">
             <PlusIcon />
           </button>
         </Link>

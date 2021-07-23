@@ -145,9 +145,9 @@ const Composer = () => {
             }}
             onClick={() => console.log("shared successfully!")}
             >
-            <button name="share" className="btn btn-md btn-secondary transition duration-500 ease-in-out"><ShareIcon />{" "}Share</button>
+            <button aria-label="share" className="btn btn-md btn-secondary transition duration-500 ease-in-out"><ShareIcon />{" "}Share</button>
           </RWebShare>
-          <button name="back" className="btn btn-md btn-accent transition duration-500 ease-in-out" onClick={() => history.goBack()}><CloseIcon />{" "}Close</button>
+          <button aria-label="back" className="btn btn-md btn-accent transition duration-500 ease-in-out" onClick={() => history.goBack()}><CloseIcon />{" "}Close</button>
         </div>
       </div>
     </React.Fragment>

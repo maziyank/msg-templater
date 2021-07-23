@@ -27,13 +27,13 @@ const Login = () => {
                 <h1 className="text-2xl text-center">Login</h1>
                 <p className="text-sm text-center px-10">Please login using <br /> your social media acocunt </p>
                 <div className="w-screen p-3 space-y-4 mt-10 grid justify-center">
-                    <button name="google" className="btn btn-primary w-60" onClick={signInUsingGoogle}>
+                    <button aria-label="google" className="btn btn-primary w-60" onClick={signInUsingGoogle}>
                         Google
                     </button>
-                    <button name="twitter" className="btn btn-primary w-60">
+                    <button aria-label="twitter" className="btn btn-primary w-60">
                         Twitter
                     </button>
-                    <button name="github" className="btn btn-primary w-60">
+                    <button aria-label="github" className="btn btn-primary w-60">
                         Github
                     </button>
                 </div>

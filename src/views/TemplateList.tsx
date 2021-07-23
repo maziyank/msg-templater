@@ -8,7 +8,7 @@ import { usePersistedState } from "../utils/util";
 const TemplateList = () => {
   const history = useHistory();
   const { Categories, StaticTemplates } = useContext(DataContext);
-  
+
   const categories: Array<Category> = Categories.categories;
   const templates: Array<Template> = StaticTemplates.templates;
   const [activeCategory, setActiveCategory] = usePersistedState('Template:posCategory', 1);
@@ -19,26 +19,25 @@ const TemplateList = () => {
     (msg: Template) => msg.category === activeCategory
   );
 
-  useEffect(()=>{
+  useEffect(() => {
     document.getElementById("scroll-area")?.scroll(0, scrollPosY || 0)
     document.getElementById("scroll-area2")?.scroll(scrollPosX || 0, 0)
   }, [])
 
-  const handleCardClick= (event:any, id: any) => {
+  const handleCardClick = (event: any, id: any) => {
     history.push(`/main/compose/${id}`);
   }
 
   return (
     <React.Fragment>
       <div className="flex flex-col w-full overflow-y-hidden h-full">
-        <div className="flex-none flex px-3 mt-1 w-full overflow-x-auto md:overflow-x-hidden" id="scroll-area2" onScroll={(e: React.UIEvent<HTMLDivElement>)=>setScrollPosX((e.target as HTMLDivElement)?.scrollLeft)}>
+        <div className="flex-none flex px-3 mt-1 w-full overflow-x-auto md:overflow-x-hidden" id="scroll-area2" onScroll={(e: React.UIEvent<HTMLDivElement>) => setScrollPosX((e.target as HTMLDivElement)?.scrollLeft)}>
           {categories.map((item: Category, index: Key) => {
             return (
               <button
-                name={`cat-${item.id}`}
-                className={`tab tab-lg tab-lifted ${
-                  activeCategory == item.id ? "tab-active" : ""
-                }`}
+                aria-label={`cat-${item.id}`}
+                className={`tab tab-lg tab-lifted ${activeCategory == item.id ? "tab-active" : ""
+                  }`}
                 key={item.id as Key}
                 onClick={() => setActiveCategory(item.id)}
               >
@@ -47,10 +46,10 @@ const TemplateList = () => {
             );
           })}
         </div>
-        <div className="flex-grow p-3 w-full overflow-y-auto bg-base-100" id="scroll-area" onScroll={(e: React.UIEvent<HTMLDivElement>)=>setScrollPosY((e.target as HTMLDivElement)?.scrollTop)}>
+        <div className="flex-grow p-3 w-full overflow-y-auto bg-base-100" id="scroll-area" onScroll={(e: React.UIEvent<HTMLDivElement>) => setScrollPosY((e.target as HTMLDivElement)?.scrollTop)}>
           {filteredTemplate.length ? (
             filteredTemplate.map((tpl: Template, index: Key) => (
-              <TemplateCard 
+              <TemplateCard
                 key={tpl.id}
                 data={tpl}
                 onCardClick={handleCardClick}

@@ -98,9 +98,9 @@ const Editor = () => {
           </div>
         </div>
         <div className="flex-none flex flex-row justify-center space-x-2 h-20">
-          <button name="save" className="btn btn-md btn-primary transition duration-500 ease-in-out" disabled={content == '' || title == ''} onClick={saveTemplate}>Save</button>
-          {routeParams.templateId && <button name="delete" className="btn btn-md btn-secondary transition duration-500 ease-in-out" onClick={handleDeleteTemplate}>Delete</button>}
-          <button name="cancel" className="btn btn-md btn-accent transition duration-500 ease-in-out" onClick={() => history.replace('/main/history')}>Cancel</button>
+          <button aria-label="save" className="btn btn-md btn-primary transition duration-500 ease-in-out" disabled={content == '' || title == ''} onClick={saveTemplate}>Save</button>
+          {routeParams.templateId && <button aria-label="delete" className="btn btn-md btn-secondary transition duration-500 ease-in-out" onClick={handleDeleteTemplate}>Delete</button>}
+          <button aria-label="cancel" className="btn btn-md btn-accent transition duration-500 ease-in-out" onClick={() => history.replace('/main/history')}>Cancel</button>
         </div>
       </div>
     </React.Fragment>
