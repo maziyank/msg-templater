@@ -1,6 +1,5 @@
 import React, { Key, useContext, useEffect, useState } from "react";
 import TemplateCard from "../components/TemplateCard";
-import { FirebaseContext } from "../firebase";
 import { DataContext } from "../DataProvider";
 import { Category, Template } from "../types/types";
 import { useHistory } from "react-router-dom";
@@ -32,7 +31,7 @@ const TemplateList = () => {
   return (
     <React.Fragment>
       <div className="flex flex-col w-screen overflow-y-hidden h-full">
-        <div className="flex-none flex px-3 mt-1 w-screen overflow-x-auto" id="scroll-area2" onScroll={(e)=>setScrollPosX(e?.target?.scrollLeft)}>
+        <div className="flex-none flex px-3 mt-1 w-screen overflow-x-auto" id="scroll-area2" onScroll={(e: React.UIEvent<HTMLDivElement>)=>setScrollPosX((e.target as HTMLDivElement)?.scrollLeft)}>
           {categories.map((item: Category, index: Key) => {
             return (
               <button
@@ -47,7 +46,7 @@ const TemplateList = () => {
             );
           })}
         </div>
-        <div className="flex-grow p-3 w-full overflow-y-auto bg-base-100" id="scroll-area" onScroll={(e)=>setScrollPosY(e?.target?.scrollTop)}>
+        <div className="flex-grow p-3 w-full overflow-y-auto bg-base-100" id="scroll-area" onScroll={(e: React.UIEvent<HTMLDivElement>)=>setScrollPosY((e.target as HTMLDivElement)?.scrollTop)}>
           {filteredTemplate.length ? (
             filteredTemplate.map((tpl: Template, index: Key) => (
               <TemplateCard 

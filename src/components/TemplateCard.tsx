@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, useCallback } from "react";
+import React, {useCallback } from "react";
 import { Link } from "react-router-dom";
 import { Template } from "../types/types";
 import { elipsis } from "../utils/util";

@@ -26,7 +26,7 @@ const PersonalTemplate = () => {
   return (
     <React.Fragment>
       <div className="w-screen">
-        <div id="scroll-area" className="px-3 pt-3 pb-40 w-full h-screen overflow-y-auto bg-base-100 space-y-4" onScroll={(e)=>setScrollPosY(e?.target?.scrollTop)}>
+        <div id="scroll-area" className="px-3 pt-3 pb-40 w-full h-screen overflow-y-auto bg-base-100 space-y-4" onScroll={(e: React.UIEvent<HTMLDivElement>)=>setScrollPosY((e.target as HTMLDivElement).scrollTop)}>
           {customTemplates && customTemplates.length==0 ? <div className="w-full h-full"><span className="block mt-40 text-center">Loading Data....</span></div>
           : customTemplates && customTemplates.map((tpl: Template, index: Key) => (
             <TemplateCard
