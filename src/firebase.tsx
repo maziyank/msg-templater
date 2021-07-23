@@ -22,11 +22,12 @@ firebaseApp.analytics();
 // provider
 const googleProvider: firebase.auth.GoogleAuthProvider = new firebase.auth.GoogleAuthProvider();
 const twitterProvider: firebase.auth.TwitterAuthProvider = new firebase.auth.TwitterAuthProvider();
+const githubProvider: firebase.auth.GithubAuthProvider = new firebase.auth.GithubAuthProvider();
 const FirebaseContext : React.Context<any> = React.createContext({});
 const FirebaseProvider : React.Provider<any> = FirebaseContext.Provider;
 
-const signInUsingGoogle = () => {
-  firebaseApp.auth().signInWithRedirect(googleProvider);
+const signIn = (provider: any) => {
+  firebaseApp.auth().signInWithRedirect(provider);
   firebaseApp.auth()
     .getRedirectResult()
     .then((result: firebase.auth.UserCredential) => {
@@ -58,4 +59,4 @@ export const deleteTemplate = (userId: string, data: Template) => {
 
 
 
-export { firebaseApp, signInUsingGoogle, signOut, FirebaseContext, FirebaseProvider, googleProvider, twitterProvider }
+export { firebaseApp, signIn, signOut, FirebaseContext, FirebaseProvider, googleProvider, twitterProvider, githubProvider }

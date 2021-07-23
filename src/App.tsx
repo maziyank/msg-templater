@@ -13,11 +13,14 @@ import Main from "./views/Main";
 import {
   FirebaseContext,
   firebaseApp,
-  signInUsingGoogle,
+  signIn,
   signOut,
   writeTemplate,
   updateTemplate,
-  deleteTemplate
+  deleteTemplate,
+  googleProvider,
+  twitterProvider,
+  githubProvider
 } from "./firebase";
 import { useHistory } from "react-router-dom";
 import { Template } from "./types/types";
@@ -43,28 +46,32 @@ const App = () => {
         customTemplates,
         updateTemplate,
         user,
-        signInUsingGoogle,
+        signIn,
         signOut,
         writeTemplate,
-        deleteTemplate
+        deleteTemplate,
+        googleProvider,
+        twitterProvider,
+        githubProvider
       }}
     >
       <Router>
-        
-        <Switch>
-          <Route exact path="/">
-            <Redirect to="/main" />
-          </Route>
-          <Route path="/main">
-            <Main />
-          </Route>
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route>
-            <NotFound />
-          </Route>
-        </Switch>
+        <main className="max-w-xl mx-auto bg-black">
+          <Switch>
+            <Route exact path="/">
+              <Redirect to="/main" />
+            </Route>
+            <Route path="/main">
+              <Main />
+            </Route>
+            <Route path="/login">
+              <Login />
+            </Route>
+            <Route>
+              <NotFound />
+            </Route>
+          </Switch>
+        </main>
       </Router>
     </FirebaseContext.Provider>
   );

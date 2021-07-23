@@ -16,7 +16,7 @@ const Login = () => {
 
     return (
         <React.Fragment>
-            <div className="absolute inset-y-0 inset-x-0 z-20 flex flex-col justify-center w-screen h-screen bg-base-200">
+            <div className="absolute inset-y-0 inset-x-0 z-20 flex flex-col justify-center w-full h-screen bg-base-200">
                 <Link to={'/main'}>
                     <button className="btn btn-circle bg-secondary btn-sm absolute top-3 right-3">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-4 h-4 stroke-current">

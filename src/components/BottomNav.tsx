@@ -21,7 +21,7 @@ const BottomNav: React.FC<any> = ({ path }) => {
   const inactiveClass = "";
 
   return (
-    <section className="block bottom-0 z-10 bg-base-300 shadow">
+    <section className="w-full z-10 bg-base-300 shadow">
       <div id="tabs " className="flex justify-between">
         {menu.map((item: BottomNavMenu, index: Key) => {
           const Icon = item.icon;

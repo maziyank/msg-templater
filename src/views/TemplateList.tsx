@@ -30,8 +30,8 @@ const TemplateList = () => {
 
   return (
     <React.Fragment>
-      <div className="flex flex-col w-screen overflow-y-hidden h-full">
-        <div className="flex-none flex px-3 mt-1 w-screen overflow-x-auto" id="scroll-area2" onScroll={(e: React.UIEvent<HTMLDivElement>)=>setScrollPosX((e.target as HTMLDivElement)?.scrollLeft)}>
+      <div className="flex flex-col w-full overflow-y-hidden h-full">
+        <div className="flex-none flex px-3 mt-1 w-full overflow-x-auto md:overflow-x-hidden" id="scroll-area2" onScroll={(e: React.UIEvent<HTMLDivElement>)=>setScrollPosX((e.target as HTMLDivElement)?.scrollLeft)}>
           {categories.map((item: Category, index: Key) => {
             return (
               <button

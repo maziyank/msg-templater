@@ -16,7 +16,7 @@ const Account = () => {
           </div>{" "}
           <div className="mt-2 text-2xl font-bold">{user ? user.displayName : 'Anonymous'}</div>{" "}
           <p className="text-sm">{user ? user.email : 'Please sign in'}</p>
-          <div className="w-screen p-3 shadow-md rounded-box">
+          <div className="w-full p-3 shadow-md rounded-box">
             <ul className="menu bg-base-100">
               {!user ? <li> <Link to={'/login'}>Login</Link> </li> : <li> <a onClick={signOut}>Logout</a> </li> }
               <li>
