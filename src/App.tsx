@@ -27,6 +27,8 @@ import { Template } from "./types/types";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useListVals } from 'react-firebase-hooks/database';
 
+import './App.css';
+
 const App = () => {
   const history = useHistory();
   const [user] = useAuthState(firebaseApp.auth());

@@ -138,9 +138,13 @@ const Composer = () => {
 
           <button name="copy" className="btn btn-md btn-primary transition duration-500 ease-in-out" onClick={CopyToClipboard}><CopyIcon />{" "}Copy</button>
           <RWebShare
+            sites= {["whatsapp", "copy", "twitter","linkedin","telegram","mail","linkedin","facebook"]}
             data={{
-              text: {currentContentRendered},              
-            }}>
+              title: 'Share Message',
+              text: currentContentRendered
+            }}
+            onClick={() => console.log("shared successfully!")}
+            >
             <button name="share" className="btn btn-md btn-secondary transition duration-500 ease-in-out"><ShareIcon />{" "}Share</button>
           </RWebShare>
           <button name="back" className="btn btn-md btn-accent transition duration-500 ease-in-out" onClick={() => history.goBack()}><CloseIcon />{" "}Close</button>

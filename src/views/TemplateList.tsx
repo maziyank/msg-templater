@@ -36,7 +36,7 @@ const TemplateList = () => {
             return (
               <button
                 name={`cat-${item.id}`}
-                className={`tab tab-lg tab-boxed ${
+                className={`tab tab-lg tab-lifted ${
                   activeCategory == item.id ? "tab-active" : ""
                 }`}
                 key={item.id as Key}

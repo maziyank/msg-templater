@@ -26,16 +26,17 @@ const Account = () => {
               </li>              
               <li>
               <RWebShare
+                    sites= {["whatsapp", "copy", "twitter","linkedin","telegram","mail","linkedin","facebook"]}
                     data={{
-                      text: "Message Templater Application",
-                      url: location.hostname,
-                      title: "Message Templater",
+                      text: "Share This App",
+                      url: "http://msg-templater.web.app",
+                      title: "Message Templater",                      
                     }}>
                 <a>Share This App</a>
                 </RWebShare>
               </li>
               <li>
-                <a>Support This App</a>
+                <a href="https://saweria.co/maziyank" rel="noopener noreferrer" target="_blank">Support This App</a>
               </li>
             </ul>
           </div>
