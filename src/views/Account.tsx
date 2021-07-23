@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { FirebaseContext } from "../firebase";
+import noPhotoUrl from './../assets/nophoto.jpg';
 
 const Account = () => {
   const { user, signOut } = useContext(FirebaseContext);
@@ -11,7 +12,7 @@ const Account = () => {
         <div className="flex flex-col items-center flex-1 w-full h-full pt-10 overflow-y-auto bg-base-200 select-none">
           <div className="avatar">
             <div className="w-32 h-32 mask mask-squircle">
-              <img src={user ? user.photoURL : './../src/assets/nophoto.jpg'}/>
+              <img src={user ? user.photoURL : noPhotoUrl}/>
             </div>
           </div>{" "}
           <div className="mt-2 text-2xl font-bold">{user ? user.displayName : 'Anonymous'}</div>{" "}
