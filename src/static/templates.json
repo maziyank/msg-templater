@@ -1,0 +1,39 @@
+{
+    "templates": [{
+        "id": 1,
+        "content": "Hi {nama} di {kota} \n \nKebahagiaan selalu ada dalam hidup Anda, semoga Tuhan memakmurkan kebahagiaan, kekayaan, dan semoga sukses selamanya dalam hidup Anda",
+        "title": "Selamat Sukses",
+        "tags": ["Tags1", "Tags2"],
+        "category": 1,
+        "custom": false
+    }, {
+        "id": 2,
+        "content": "Lorem Ipsum dolor sit amet preketek. Lorem Ipsum dolor sit amet preketek. Lorem Ipsum dolor sit amet preketek",
+        "title": "Judul",
+        "tags": ["Tags1", "Tags2"],
+        "category": 1,
+        "custom": false
+    }, {
+        "id": 3,
+        "content": "Lorem Ipsum dolor sit amet preketek. Lorem Ipsum dolor sit amet preketek. Lorem Ipsum dolor sit amet preketek",
+        "title": "Judul",
+        "tags": ["Tags1", "Tags2"],
+        "category": 2,
+        "custom": false
+    }, {
+        "id": 4,
+        "content": "Lorem Ipsum dolor sit amet preketek. Lorem Ipsum dolor sit amet preketek. Lorem Ipsum dolor sit amet preketek",
+        "title": "Judul",
+        "tags": ["Tags1", "Tags2"],
+        "category": 2,
+        "custom": false
+    }, {
+        "id": 5,
+        "content": "Lorem Ipsum dolor sit amet preketek. Lorem Ipsum dolor sit amet preketek. Lorem Ipsum dolor sit amet preketek",
+        "title": "Judul",
+        "tags": ["Tags1", "Tags2"],
+        "category": 2,
+        "custom": false
+    }]
+
+}

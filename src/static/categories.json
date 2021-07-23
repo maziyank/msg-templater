@@ -1,0 +1,33 @@
+{
+    "categories": [
+        {
+            "id": 1,
+            "text": "Business"
+        },
+        {
+            "id": 2,
+            "text": "Productivity"
+        },
+        {
+            "id": 3,
+            "text": "Academic"
+        },
+        {
+            "id": 4,
+            "text": "Social"
+        },
+        {
+            "id": 5,
+            "text": "Religion"
+        },
+        {
+            "id": 6,
+            "text": "Family"
+        },
+        {
+            "id": 7,
+            "text": "Others"
+        }
+    ]
+
+}
