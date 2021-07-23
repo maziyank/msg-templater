@@ -1,6 +1,6 @@
 {
-  "name": "vite-react-tailwind-starter",
-  "version": "0.0.0",
+  "name": "msg-templater",
+  "version": "0.0.1",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -8,23 +8,15 @@
   },
   "dependencies": {
     "@react-firebase/auth": "^0.2.10",
-    "@supabase/supabase-js": "^1.19.0",
-    "@types/react-edit-text": "^4.0.1",
     "daisyui": "^1.9.0",
-    "dotenv": "^10.0.0",
     "firebase": "^8.7.1",
-    "medium-editor": "^5.23.3",
     "react": "^17.0.0",
-    "react-contenteditable": "^3.3.5",
     "react-dom": "^17.0.0",
-    "react-edit-text": "^4.0.3",
     "react-firebase-hooks": "^3.0.4",
     "react-router-dom": "^5.2.0",
-    "react-router-scroll-memory": "^2.0.7",
     "react-scripts": "^4.0.3",
-    "react-scroll-manager": "^1.0.3",
-    "react-scroll-restoration": "^1.0.8",
-    "use-long-press": "^1.1.1"
+    "use-long-press": "^1.1.1",
+    "vite-plugin-svg-react": "^1.0.3"
   },
   "devDependencies": {
     "@types/react": "^17.0.0",
