@@ -5,8 +5,6 @@ import "firebase/database";
 import React from "react";
 import { Template } from "./types/types";
 
-console.log(import.meta.env)
-
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_APIKEY,
   authDomain: import.meta.env.VITE_AUTHDOMAIN,
