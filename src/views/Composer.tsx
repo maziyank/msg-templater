@@ -97,7 +97,7 @@ const Composer = () => {
                   </label>
                   <input
                     type="text"
-                    autoFocus
+                    autoFocus={index == 0}
                     placeholder={toTitleCase(item.name as string)}
                     className="input input-bordered"
                     onChange={(event: React.ChangeEvent<any>) =>
