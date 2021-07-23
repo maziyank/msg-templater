@@ -15,6 +15,7 @@
     "react-firebase-hooks": "^3.0.4",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.3",
+    "react-web-share": "^1.1.0",
     "use-long-press": "^1.1.1",
     "vite-plugin-svg-react": "^1.0.3"
   },
