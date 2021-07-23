@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { FirebaseContext } from "../firebase";
 import noPhotoUrl from './../assets/nophoto.jpg';
+import { RWebShare } from "react-web-share";
 
 const Account = () => {
   const { user, signOut } = useContext(FirebaseContext);
@@ -24,7 +25,14 @@ const Account = () => {
                 <a>Select Language</a>
               </li>              
               <li>
+              <RWebShare
+                    data={{
+                      text: "Message Templater Application",
+                      url: location.hostname,
+                      title: "Message Templater",
+                    }}>
                 <a>Share This App</a>
+                </RWebShare>
               </li>
               <li>
                 <a>Support This App</a>

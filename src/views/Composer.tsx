@@ -10,6 +10,7 @@ import { ReactComponent as CopyIcon } from './../assets/icon/copy.svg';
 import { ReactComponent as ShareIcon } from './../assets/icon/share.svg';
 import { ReactComponent as CloseIcon } from './../assets/icon/close.svg';
 import { FirebaseContext } from "../firebase";
+import { RWebShare } from "react-web-share";
 
 const Composer = () => {
   const { StaticTemplates } = useContext(DataContext);
@@ -69,16 +70,6 @@ const Composer = () => {
       textArea.select();
       document.execCommand('copy');
     }, 1000);
-  }
-
-  const Share = () => {
-    if (navigator.share) {
-      navigator.share({
-        title: 'Mate',
-        text: currentContentRendered,
-        url: location.hostname,
-      })
-    }
   }
 
   return (
@@ -146,7 +137,12 @@ const Composer = () => {
         <div className="flex-none flex flex-row justify-center space-x-2 h-20">
 
           <button name="copy" className="btn btn-md btn-primary transition duration-500 ease-in-out" onClick={CopyToClipboard}><CopyIcon />{" "}Copy</button>
-          <button name="share" className="btn btn-md btn-secondary transition duration-500 ease-in-out" onClick={Share}><ShareIcon />{" "}Share</button>
+          <RWebShare
+            data={{
+              text: {currentContentRendered},              
+            }}>
+            <button name="share" className="btn btn-md btn-secondary transition duration-500 ease-in-out"><ShareIcon />{" "}Share</button>
+          </RWebShare>
           <button name="back" className="btn btn-md btn-accent transition duration-500 ease-in-out" onClick={() => history.goBack()}><CloseIcon />{" "}Close</button>
         </div>
       </div>
