@@ -1,19 +1,23 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import { ReactComponent as DarkIcon } from './../assets/icon/night.svg';
 import { ReactComponent as LightIcon } from './../assets/icon/light.svg';
+import { usePersistedState } from '../utils/util';
 
 interface Props {
   title: string
 }
 
 const Header: React.FC<Props> = ({ title }) => {
-  const [nightMode, setNightMode] = useState(false);
+  const [nightMode, setNightMode] = usePersistedState('nightMode', false);
   const ThemeIcon = nightMode ? DarkIcon : LightIcon;
+
+  useEffect(()=>{
+    const html = document.getElementsByTagName("html")[0];    
+    html.setAttribute("data-theme", nightMode ? "dark" : "light");
+  })
 
   const changeMode = () => {
     setNightMode(!nightMode);
-    const html = document.getElementsByTagName("html")[0];
-    html.setAttribute("data-theme", nightMode ? "dark" : "light");
   }
 
   return (

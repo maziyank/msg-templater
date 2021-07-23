@@ -7,7 +7,7 @@ import { usePersistedState } from "../utils/util";
 import { ReactComponent as PlusIcon } from "./../assets/icon/plus.svg";
 
 const PersonalTemplate = () => {
-  const { user, customTemplates, deleteTemplate } = useContext(FirebaseContext);
+  const { user, customTemplates } = useContext(FirebaseContext);
   const history = useHistory();
   const [scrollPosY, setScrollPosY] = usePersistedState('personalTemplate:scrollPosY', 0);
 
