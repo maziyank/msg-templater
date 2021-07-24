@@ -21,7 +21,7 @@ const Main = () => {
                 <DataContext.Provider value={{ Categories, StaticTemplates }}>
                     <Switch>
                         <Route exact path={path}>
-                            <TemplateList />
+                            <Account />
                         </Route>
                         <Route path={`${path}/template`}>
                             <TemplateList />

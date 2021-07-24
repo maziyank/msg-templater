@@ -11,14 +11,8 @@ const Editor = () => {
   const routeParams: any = useParams();
   const [content, setContent] = useState('');
   const [title, setTitle] = useState('');
+  const [lang, setLang] = useState('en');
   const { user, writeTemplate, updateTemplate, deleteTemplate, customTemplates } = useContext(FirebaseContext);
-
-  // const routeParams: any = useParams();
-  // const { Categories } = useContext(DataContext);
-  // const categories: Array<Category> = Categories.categories;
-
-  // const [category, setCategory] = useState(routeParams.defaulCat);
-
 
   useState(() => {
     if (routeParams.templateId && customTemplates) {
@@ -34,13 +28,13 @@ const Editor = () => {
     if (routeParams.templateId) {
       if (content != '' && title != '' && user) {
         const custom = true;
-        updateTemplate(user.uid, { title, content, custom, keyField: routeParams.templateId });        
+        updateTemplate(user.uid, { title, content, lang, custom, keyField: routeParams.templateId });
       }
     } else {
       if (content != '' && title != '' && user) {
         const id = new Date().valueOf();
         const custom = true;
-        writeTemplate(user.uid, { id, title, content, custom });
+        writeTemplate(user.uid, { id, title, lang, content, custom });
       }
     }
 
@@ -51,7 +45,7 @@ const Editor = () => {
     if (routeParams.templateId) {
       deleteTemplate(user.uid, { keyField: routeParams.templateId })
       history.replace('/main/history');
-    }    
+    }
   }
 
   return (
@@ -73,19 +67,19 @@ const Editor = () => {
               value={title} onChange={(e: React.ChangeEvent<any>) => setTitle(e.target.value)}
             />
           </div>
-          {/* <div className="flex-none form-control">
+          <div className="form-control">
             <label className="label">
-              <span className="label-text">Category</span>
+              <span className="label-text">Language</span>
             </label>
-            <select
-              className="select select-bordered w-full max-w-xs"
-              value={category} onChange={(e: React.ChangeEvent<any>) => setCategory(e.target.value)}
-            >
-              { categories.map((item: Category, index: any) => {
-                return <option key={item.id} value={item.id}>{item.text}</option>;
-              })}
+            <select value={lang} className="select select-bordered" onChange={(event: React.ChangeEvent<any>) =>
+              setLang((event.target as HTMLSelectElement).value)
+            }>
+              <option value="">Select All</option>
+              <option value="en">English</option>
+              <option value="id">Indonesia</option>
+              <option value="jv">Javanese</option>
             </select>
-          </div> */}
+          </div>
           <div className="flex-grow form-control">
             <label className="cursor-pointer label">
               <span className="label-text">Template</span>
@@ -98,7 +92,7 @@ const Editor = () => {
           </div>
         </div>
         <div className="flex-none flex flex-row justify-center space-x-2 h-20">
-          <button aria-label="save" className="btn btn-md btn-primary transition duration-500 ease-in-out" disabled={content == '' || title == ''} onClick={saveTemplate}>Save</button>
+          <button aria-label="save" className="btn btn-md btn-primary transition duration-500 ease-in-out" disabled={content == '' || title == '' || lang == ''} onClick={saveTemplate}>Save</button>
           {routeParams.templateId && <button aria-label="delete" className="btn btn-md btn-secondary transition duration-500 ease-in-out" onClick={handleDeleteTemplate}>Delete</button>}
           <button aria-label="cancel" className="btn btn-md btn-accent transition duration-500 ease-in-out" onClick={() => history.replace('/main/history')}>Cancel</button>
         </div>

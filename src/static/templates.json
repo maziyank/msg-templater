@@ -5,6 +5,7 @@
         "title": "Selamat Sukses",
         "tags": ["Tags1", "Tags2"],
         "category": 1,
+        "lang": "id",
         "custom": false
     }, {
         "id": 2,
@@ -12,6 +13,7 @@
         "title": "Judul",
         "tags": ["Tags1", "Tags2"],
         "category": 1,
+        "lang": "id",
         "custom": false
     }, {
         "id": 3,
@@ -19,6 +21,7 @@
         "title": "Judul",
         "tags": ["Tags1", "Tags2"],
         "category": 2,
+        "lang": "id",
         "custom": false
     }, {
         "id": 4,
@@ -26,6 +29,7 @@
         "title": "Judul",
         "tags": ["Tags1", "Tags2"],
         "category": 2,
+        "lang": "id",
         "custom": false
     }, {
         "id": 5,
@@ -33,6 +37,7 @@
         "title": "Judul",
         "tags": ["Tags1", "Tags2"],
         "category": 2,
+        "lang": "id",
         "custom": false
     }]
 

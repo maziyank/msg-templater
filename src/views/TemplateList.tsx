@@ -4,6 +4,8 @@ import { DataContext } from "../DataProvider";
 import { Category, Template } from "../types/types";
 import { useHistory } from "react-router-dom";
 import { usePersistedState } from "../utils/util";
+import FilterTemplate from "../components/FilterTemplate";
+import { ReactComponent as FilterIcon } from "./../assets/icon/filter.svg";
 
 const TemplateList = () => {
   const history = useHistory();
@@ -15,14 +17,20 @@ const TemplateList = () => {
   const [scrollPosY, setScrollPosY] = usePersistedState('Template:scrollPosY', 0);
   const [scrollPosX, setScrollPosX] = usePersistedState('Template:scrollPosX', 0);
 
-  const filteredTemplate = templates.filter(
-    (msg: Template) => msg.category === activeCategory
-  );
+  // Filter Data
+  const [filterOpen, setFilterOpen] = useState(false);
+  const [keyword, setKeyword] = useState('');
+  const [lang, setLang] = useState('');
+
 
   useEffect(() => {
-    document.getElementById("scroll-area")?.scroll(0, scrollPosY || 0)
-    document.getElementById("scroll-area2")?.scroll(scrollPosX || 0, 0)
+    document.getElementById("scroll-area")?.scroll(0, scrollPosY || 0);
+    document.getElementById("scroll-area2")?.scroll(scrollPosX || 0, 0);
   }, [])
+
+  const filteredTemplate = templates.filter((tpl: Template) => tpl.category === activeCategory)
+    .filter((tpl: Template) => (lang?.length > 0 ? lang == tpl.lang : true))
+    .filter((tpl: Template) => (keyword?.length > 0 ? tpl.content.indexOf(keyword) > 0 : true));
 
   const handleCardClick = (event: any, id: any) => {
     history.push(`/main/compose/${id}`);
@@ -58,14 +66,19 @@ const TemplateList = () => {
           ) : (
             <div className="flex h-3/4">
               <p className="text-center m-auto">
-                <span className="font-bold">Templates is empty.</span>
+                <span className="font-bold">Templates not found.</span>
               </p>
             </div>
           )}
         </div>
+        {!filterOpen && <button onClick={() => setFilterOpen(true)} aria-label="add" className={`fixed ring-1 ring-opacity-80  ring-purple-500 right-5 bottom-20 z-20 btn btn-circle btn-md ${lang != '' || keyword != '' ? 'bg-purple-900' : 'bg-primary'} shadow-2xl transition ease-in duration-200`}>
+          <FilterIcon />
+        </button>}
+        <FilterTemplate open={filterOpen} onApply={(kw: any, lng: any) => { setKeyword(kw); setLang(lng); }} onClose={() => setFilterOpen(false)} />
       </div>
 
     </React.Fragment>
+
   );
 };
 
