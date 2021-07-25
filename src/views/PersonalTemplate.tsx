@@ -37,15 +37,20 @@ const PersonalTemplate = () => {
     <React.Fragment>
       <div className="w-full">
         <div id="scroll-area" className="px-3 pt-3 pb-40 w-full h-screen overflow-y-auto bg-base-100 space-y-4" onScroll={(e: React.UIEvent<HTMLDivElement>) => setScrollPosY((e.target as HTMLDivElement).scrollTop)}>
-          {filteredTemplate && filteredTemplate.length == 0 ? <div className="w-full h-full"><span className="block mt-40 text-center">Loading Data....</span></div>
-            : filteredTemplate && filteredTemplate.map((tpl: Template, index: Key) => (
+          {user && filteredTemplate? filteredTemplate && filteredTemplate.map((tpl: Template, index: Key) => (
               <TemplateCard
                 data={tpl}
                 key={index}
                 onLongPress={handleCardLongPress}
                 onCardClick={handleCardClick}
               />
-            ))}
+            )): 
+            <div className="flex h-3/4">
+              <p className="text-center m-auto">
+                <span className="font-bold">Please login to use this feature.</span>
+              </p>
+            </div>
+          }
         </div>
       </div>
       {user && !filterOpen && <button onClick={() => setFilterOpen(true)} aria-label="add" className={`fixed ring-1 ring-opacity-80  ring-purple-500 right-5 bottom-20 z-20 btn btn-circle btn-md ${lang != '' || keyword != '' ? 'bg-purple-900' : 'bg-primary'} shadow-2xl transition ease-in duration-200`}>
