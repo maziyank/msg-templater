@@ -1,9 +1,10 @@
 {
   "name": "msg-templater",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "deploy": "tsc && vite build && firebase deploy --only hosting",
     "serve": "vite preview"
   },
   "dependencies": {
