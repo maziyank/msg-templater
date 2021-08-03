@@ -33,7 +33,7 @@
         "custom": false
     }, {
         "id": 5,
-        "content": "Hai mantan, selamat atas pernikahanmu dengannya. Semoga kalian berdua bahagia selalu dan memiliki momongan yang menggemaskan. Tertanda, dari masa lalu yang pernah menjagamu.",
+        "content": "Hai {nama}, selamat atas pernikahanmu dengannya. Semoga kalian berdua bahagia selalu dan memiliki momongan yang menggemaskan. Tertanda, dari masa lalu yang pernah menjagamu.",
         "title": "Ucapan Pernikahan Mantan",
         "tags": ["Tags1", "Tags2"],
         "category": 4,
