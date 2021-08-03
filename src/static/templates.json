@@ -9,34 +9,34 @@
         "custom": false
     }, {
         "id": 2,
-        "content": "Lorem Ipsum dolor sit amet preketek. Lorem Ipsum dolor sit amet preketek. Lorem Ipsum dolor sit amet preketek",
-        "title": "Judul",
+        "content": "Selamat menempuh perjalanan hidup baru {nama}. Semoga menjadi keluarga yang sakinah mawaddah warrahmah. Semoga kamu, pasangan, dan anak-anakmu kelak selalu berada dalam lindungan Allah swt.",
+        "title": "Ucapan Pernikahan",
         "tags": ["Tags1", "Tags2"],
-        "category": 1,
+        "category": 4,
         "lang": "id",
         "custom": false
     }, {
         "id": 3,
-        "content": "Lorem Ipsum dolor sit amet preketek. Lorem Ipsum dolor sit amet preketek. Lorem Ipsum dolor sit amet preketek",
-        "title": "Judul",
+        "content": "Selamat {nama} atas pernikahannya. Kini, kamu telah menempuh jalan hidup barumu dengan yang telah Allah anugerahkan padamu. Semoga rahmat Allah senantiasa dilimpahkan pada kalian, menjadikan kalian semakin bersyukur dan bahagia. Semoga jalan-jalan pintu rezeki dibukakan untuk kalian",
+        "title": "Ucapan Pernikahan",
         "tags": ["Tags1", "Tags2"],
-        "category": 2,
+        "category": 4,
         "lang": "id",
         "custom": false
     }, {
         "id": 4,
-        "content": "Lorem Ipsum dolor sit amet preketek. Lorem Ipsum dolor sit amet preketek. Lorem Ipsum dolor sit amet preketek",
-        "title": "Judul",
+        "content": "Happy wedding day {nama}! Selamat menempuh hidup baru. Setialah pada pasanganmu dan semoga Tuhan selalu melimpahkan kebaikan pada pernikahan kalian berdua.",
+        "title": "Ucapan Pernikahan",
         "tags": ["Tags1", "Tags2"],
-        "category": 2,
+        "category": 4,
         "lang": "id",
         "custom": false
     }, {
         "id": 5,
-        "content": "Lorem Ipsum dolor sit amet preketek. Lorem Ipsum dolor sit amet preketek. Lorem Ipsum dolor sit amet preketek",
-        "title": "Judul",
+        "content": "Hai mantan, selamat atas pernikahanmu dengannya. Semoga kalian berdua bahagia selalu dan memiliki momongan yang menggemaskan. Tertanda, dari masa lalu yang pernah menjagamu.",
+        "title": "Ucapan Pernikahan Mantan",
         "tags": ["Tags1", "Tags2"],
-        "category": 2,
+        "category": 4,
         "lang": "id",
         "custom": false
     }]

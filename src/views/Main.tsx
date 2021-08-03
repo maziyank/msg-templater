@@ -15,7 +15,7 @@ const Main = () => {
     return (
         <div className="flex flex-col h-screen">
             <div className="flex-none">
-                <Header title={"Mate App"} />
+                <Header title={"Message Templater"} />
             </div>
             <div className="flex-grow overflow-auto bg-base-200">
                 <DataContext.Provider value={{ Categories, StaticTemplates }}>
