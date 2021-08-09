@@ -39,6 +39,33 @@
         "category": 4,
         "lang": "id",
         "custom": false
-    }]
+    }, {
+        "id": 6,
+        "content": "{nama}, Selamat atas promosi jabatanya. Tetap sukses dengan amanah yang baru.",
+        "title": "Selamat Promosi",
+        "tags": ["Tags1", "Tags2"],
+        "category": 2,
+        "lang": "id",
+        "custom": false
+    }, {
+        "id": 7,
+        "content": "Hai {nama}, Selamat atas kelulusannya. Semoga ilmu yang didapatkan berkah dan bermanfaat.",
+        "title": "Selamat Promosi",
+        "tags": ["Tags1", "Tags2"],
+        "category": 3,
+        "lang": "id",
+        "custom": false
+    }, {
+        "id": 8,
+        "content": "Hai {nama}, Selamat atas sidang kelulusan beasiswanya. Semoga semua urusan lancar dan sukses dalam studinya",
+        "title": "Selamat Sekolah",
+        "tags": ["Tags1", "Tags2"],
+        "category": 3,
+        "lang": "id",
+        "custom": false
+    }
+
+
+]
 
 }
