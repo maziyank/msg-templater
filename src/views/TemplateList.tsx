@@ -71,7 +71,7 @@ const TemplateList = () => {
             </div>
           )}
         </div>
-        {!filterOpen && <button onClick={() => setFilterOpen(true)} aria-label="add" className={`fixed ring-1 ring-opacity-80  ring-purple-500 right-5 bottom-20 z-20 btn btn-circle btn-md ${lang != '' || keyword != '' ? 'bg-purple-900' : 'bg-primary'} shadow-2xl transition ease-in duration-200`}>
+        {!filterOpen && <button onClick={() => setFilterOpen(true)} aria-label="add" className={`absolute ring-1 ring-opacity-80  ring-purple-500 right-5 bottom-20 z-20 btn btn-circle btn-md ${lang != '' || keyword != '' ? 'bg-purple-900' : 'bg-primary'} shadow-2xl transition ease-in duration-200`}>
           <FilterIcon />
         </button>}
         <FilterTemplate open={filterOpen} onApply={(kw: any, lng: any) => { setKeyword(kw); setLang(lng); }} onClose={() => setFilterOpen(false)} />

@@ -26,7 +26,6 @@ import { useHistory } from "react-router-dom";
 import { Template } from "./types/types";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useListVals } from 'react-firebase-hooks/database';
-
 import './App.css';
 
 const App = () => {
@@ -35,13 +34,14 @@ const App = () => {
   const [customTemplates] = useListVals<Template>(user && firebaseApp.database().ref('template/' + user.uid), { keyField: 'keyField' });
 
   if (user && history) history.push("/main/account");
-
+ 
   useEffect(() => {
     if ("scrollRestoration" in window.history) {
       window.history.scrollRestoration = "manual"
-    }
+    }    
   }, []);
 
+  
   return (
     <FirebaseContext.Provider
       value={{
@@ -68,7 +68,7 @@ const App = () => {
             </Route>
             <Route path="/login">
               <Login />
-            </Route>
+            </Route>   
             <Route>
               <NotFound />
             </Route>

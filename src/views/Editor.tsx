@@ -50,7 +50,7 @@ const Editor = () => {
 
   return (
     <React.Fragment>
-      <div className="flex flex-col absolute inset-y-0 inset-x-0 z-20 w-full h-screen bg-base-200">
+      <div className="flex max-w-xl mx-auto flex-col absolute inset-y-0 inset-x-0 z-20 w-full h-screen bg-base-200">
         <div className="flex-none">
           <Header title={routeParams.templateId ? "Edit Template" : "New Template"}></Header>
         </div>
